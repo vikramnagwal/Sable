@@ -17,11 +17,11 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 }
 
 const buttonVariants = cva(
-    'relative inline-flex items-center justify-center cursor-pointer capitalize rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-primary text-primary-foreground hover:bg-primary/90 px-4 py-2',
+    'relative inline-flex items-center justify-center cursor-pointer capitalize rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-white text-primary-background hover:bg-primary',
     {
         variants: {
             variant: {
-                primary: 'outline bg-primary text-primary-foreground hover:bg-primary/90 ',
+                primary: 'outline bg-white text-black hover:bg-white/90 ',
                 secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80',
                 ghost: 'bg-transparent hover:bg-accent hover:text-accent-foreground',
                 link: 'bg-transparent underline-offset-4 hover:underline text-blue-600',
