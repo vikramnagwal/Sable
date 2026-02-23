@@ -12,8 +12,7 @@ export default function SignIn() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
-    watch,
+    formState: { errors }
   } = useForm<Inputs>({});
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
@@ -21,7 +20,7 @@ export default function SignIn() {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full p-2 flex flex-col justify-between">
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="flex flex-col items-center gap-4 w-full"
@@ -30,7 +29,7 @@ export default function SignIn() {
           {...register("email", { required: true })}
           type="email"
           placeholder="JohnDoe@example.com"
-          className="px-4 py-3 bg-white/20 rounded-full w-full md:w-120 mx-3"
+          className="px-4 py-3 bg-white/20 rounded-full w-full mx-3"
         />
         {errors.email && (
           <span className="text-red-500">Email is required</span>
@@ -39,14 +38,18 @@ export default function SignIn() {
           {...register("password", { required: true })}
           type={"password"}
           placeholder="Password"
-          className="px-4 py-3 bg-white/20 rounded-full w-full md:w-120 mx-3"
+          className="px-4 py-3 bg-white/20 rounded-full w-full mx-3"
         />
         {errors.password && (
           <span className="text-red-500">Password is required</span>
         )}
 
         <Button type="submit" label="Sign In" className="w-full" />
+        <p className="text-center mt-2 text-sm opacity-80 text-gray-300">
+          By continuing, you agree to our Terms of Service and Privacy Policy.
+        </p>
       </form>
     </div>
   );
 }
+ 
