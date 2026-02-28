@@ -1,5 +1,6 @@
 import { Github } from "@/components/icons/github";
 import { signIn } from "@/lib/auth";
+import { Button } from "../button";
 
 export default function SignInGithub() {
   return (
@@ -9,13 +10,7 @@ export default function SignInGithub() {
         await signIn("github");
       }}
     >
-      <button
-        type="submit"
-        className="bg-white text-black px-4 py-2 rounded-md font-semibold flex items-center "
-      >
-        <Github className="mr-2" />
-        Register with Github
-      </button>
+      <Button type="submit" label="Register with Github" icon={<Github />}/>
     </form>
   );
 }
