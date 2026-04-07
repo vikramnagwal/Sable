@@ -47,11 +47,11 @@ export default function SignIn() {
         <p className="text-center mt-2 text-sm opacity-80 text-gray-300">
           By continuing, you agree to our{" "}
           <span className="underline underline-offset-2">Terms of Service</span>{" "}
-          and
+          and {' '}
           <span className="underline underline-offset-2">Privacy Policy.</span>
         </p>
         <p className="text-sm opacity-80">Don&apos;t have an account? 
-          <a href="/register" className="underline underline-offset-2 cursor-pointer hover:text-white"> Signup</a>
+          <a href="/sign-up" className="underline underline-offset-2 cursor-pointer hover:text-white"> Signup</a>
         </p>
       </form>
     </div>
