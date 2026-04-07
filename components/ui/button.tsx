@@ -17,7 +17,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 }
 
 const buttonVariants = cva(
-    'relative inline-flex items-center justify-center cursor-pointer capitalize rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-white text-primary-background hover:bg-primary',
+    'cursor-pointer relative inline-flex items-center justify-center cursor-pointer capitalize rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-white text-primary-background hover:bg-primary',
     {
         variants: {
             variant: {

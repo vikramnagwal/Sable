@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { Globe } from "@/components/ui/globe";
 
 export default function Hero() {
@@ -11,7 +10,6 @@ export default function Hero() {
         <p className="text-center md:text-lg px-3 mt-4 font-lexend-deca">
           A tool for creating your appointments attractive and beautifull.
         </p>
-       <Button label="Get Started" className="mt-8"/>
         <Globe className=" mt-80"/>
       </section>
   );
