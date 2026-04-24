@@ -1,3 +1,3 @@
 const siteName = "Sable";
 
-export {siteName};
+export { siteName };

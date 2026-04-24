@@ -30,6 +30,7 @@ model Tokens {
   token String
   Jwt Boolean @default(false)
   session Boolean @default(false)
+  tokenType  TokenType
   userId Int
   user User @relation(fields: [userId], references: [id])
 }
@@ -51,4 +52,9 @@ enum Platform {
   ZOOM
   TEAMS
   GOOGLE_MEET
+}
+
+enum TokenType {
+  EMAIL_VERIFICATION
+  PASSWORD_RESET
 }

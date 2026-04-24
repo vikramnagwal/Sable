@@ -1,22 +1,46 @@
 "use client";
-import { z } from "zod";
-import { useForm } from "react-hook-form"
 
-type SignUpSchema = z.infer<typeof signUpSchema>
+import {
+	RegisterProvider,
+	useRegisterContext,
+} from "@/packages/ui/auth/register/context";
+import { SignupEmail } from "@/packages/ui/auth/register/signup-email";
 
-const signUpSchema = z.object({
-    email: z.string().email(),
-    password: z.string().min(6).max(100)
-});
 
+export default function RegisterPageClient() {
+	return (
+		<RegisterProvider>
+			<RegisterPageFlow />
+		</RegisterProvider>
+	);
+}
+
+// Register
 export function SignUp() {
-    const { register, handleSubmit } = useForm<SignUpSchema>();
-    return (
-        <div>
-            <div></div>
-            <div>
-                <form ></form>
-            </div>
-        </div>
-    )
+	return (
+		<div>
+			<h1 className="text-4xl font-bold mb-2">Create an account</h1>
+			<p className="text-lg text-muted-foreground">
+				Join us today! Create your account to get started.
+			</p>
+			<SignupEmail />
+		</div>
+	);
+}
+
+// verification
+export function VerifyEmail() {}
+
+function RegisterPageFlow() {
+	const { steps } = useRegisterContext();
+
+	switch (steps) {
+		case "signup":
+			<SignupEmail />;
+			break;
+
+		default:
+			return <SignupEmail />;
+			break;
+	}
 }
