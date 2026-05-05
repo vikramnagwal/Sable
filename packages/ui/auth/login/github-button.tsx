@@ -1,16 +1,12 @@
-import { Github } from "@/packages/icons/github";
-import { signIn } from "@/lib/auth";
+import { signInWithGithub } from "@/lib/actions/sso";
 import { Button } from "../../button";
+import { Github } from "@/packages/icons/github";
+
 
 export default function SignInGithub() {
-	return (
-		<form
-			action={async () => {
-				"use server";
-				await signIn("github");
-			}}
-		>
-			<Button type="submit" label="Register with Github" icon={<Github />} />
-		</form>
-	);
+  return (
+    <form action={signInWithGithub}>
+      <Button label="Sign In with Github" type="submit" icon={<Github />} />
+    </form>
+  );
 }

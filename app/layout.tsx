@@ -1,3 +1,4 @@
+import { Toaster } from "sonner";
 import type { Metadata } from "next";
 import { Geist_Mono, Lexend_Deca } from "next/font/google";
 import "./globals.css";
@@ -27,6 +28,7 @@ export default function RootLayout({
 			<body
 				className={`${lexendDeca.variable} ${geistMono.variable} antialiased`}
 			>
+				<Toaster richColors position="top-right" />
 				{children}
 			</body>
 		</html>

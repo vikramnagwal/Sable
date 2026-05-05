@@ -14,7 +14,7 @@ export default function LoginPage() {
 					Welcome back! Please sign in to your account.
 				</p>
 			</div>
-			<div className="flex flex-col gap-5 items-center mt-3 md:mt-6 w-full max-w-md">
+			<div className="flex flex-col gap-3 items-center mt-3 md:mt-6 w-full max-w-md">
 				<SignIn />
 				<AuthSeparator />
 				<div className="flex flex-col md:flex-row md:justify-center items-center gap-2 w-full mx-auto">
